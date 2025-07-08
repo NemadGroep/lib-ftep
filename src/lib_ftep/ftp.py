@@ -3,6 +3,7 @@ import logging
 from ftplib import FTP
 from io import BytesIO
 from lib_invoice import Invoice
+from lib_idoc import IDOC
 
 logger = logging.getLogger(__name__)
 
