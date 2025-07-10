@@ -1,4 +1,4 @@
-from .ftp import FTP_
+from .ftp import FTEP
 
 __all__ = [
     'FTEP',
