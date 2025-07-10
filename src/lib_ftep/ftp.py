@@ -7,7 +7,7 @@ from lib_idoc import IDOC
 
 logger = logging.getLogger(__name__)
 
-class FTP_:
+class FTEP:
     def __init__(self):
         self.ftp_hostname = os.getenv('FTP_HOSTNAME')
         self.ftp_username = os.getenv('FTP_USERNAME')
