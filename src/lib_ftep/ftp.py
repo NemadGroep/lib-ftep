@@ -20,6 +20,21 @@ class FTEP:
         """Connects to the FTP server."""
         self.ftp = FTP(self.ftp_hostname)
         self.ftp.login(self.ftp_username, self.ftp_password)
+        logger.info("Connected to FTP server.")
+
+    def disconnect(self):
+        """Disconnects from the FTP server."""
+        if self.ftp:
+            try:
+                self.ftp.quit()
+                logger.info("Disconnected from FTP server.")
+            except Exception:
+                logger.exception("FTP server responds with an error to QUIT command.")
+                try:
+                    self.ftp.close()
+                    logger.info("FTP connection closed.")
+                except Exception:
+                    logger.exception("FTP server responds with an error to CLOSE command.")
 
     def upload_idoc(self, idoc: IDOC):
         """Uploads a file to the FTP server."""
