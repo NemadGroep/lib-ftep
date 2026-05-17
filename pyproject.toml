@@ -1,6 +1,6 @@
 [project]
 name = "lib-ftep"
-version = "0.1.0"
+version = "0.2.0"
 description = ""
 authors = [
     {name = "Nathan Blum",email = "n.blum@student.tudelft.nl"}
